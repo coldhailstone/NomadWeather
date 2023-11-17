@@ -17,7 +17,7 @@ export default function App() {
     const [days, setDays] = useState([]);
     const [location, setLocation] = useState();
     const [ok, setOk] = useState(true);
-    const ask = async () => {
+    const getWeather = async () => {
         const { granted } = await Location.requestForegroundPermissionsAsync();
         if (!granted) {
             setOk(false);
@@ -40,7 +40,7 @@ export default function App() {
         setDays(list.filter(({ dt_txt }) => dt_txt.endsWith('00:00:00')));
     };
     useEffect(() => {
-        ask();
+        getWeather();
     }, []);
 
     return (
@@ -102,6 +102,6 @@ const styles = StyleSheet.create({
         fontSize: 60,
     },
     tinyText: {
-        fontSize: 20,
+        fontSize: 30,
     },
 });
