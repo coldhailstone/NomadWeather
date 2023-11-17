@@ -11,7 +11,7 @@ import {
 import * as Location from 'expo-location';
 import { Fontisto } from '@expo/vector-icons';
 
-const API_KEY = '6fd31c8c57c906bebc67e772cf640908';
+const API_KEY = 'API KEY 필요 (openweathermap 홈페이지)';
 
 const icons = {
     Clear: 'day-sunny',
